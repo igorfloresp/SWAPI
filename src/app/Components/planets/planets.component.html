@@ -1,0 +1,79 @@
+<div  class="title">
+  <h1>Planetas</h1>
+</div>
+
+<div  class="tbody">
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Período de rotação</th>
+      <th scope="col">Período em orbita</th>
+      <th scope="col">Diâmetro</th>
+      <th scope="col">Clima</th>
+      <th scope="col">Gravidade</th>
+      <th scope="col">Terreno</th>
+      <th scope="col">Superfície de água</th>
+      <th scope="col">População</th>
+      <th scope="col">Criado em:</th>
+      <th scope="col">Editado em:</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let planet of planets">
+        <th scope="row">{{ planet.name }}</th>
+        <td>
+          <div>
+          {{ planet.rotation_period }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.orbital_period }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.diameter }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.climate }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.gravity }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.terrain }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.surface_water }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.population }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.created | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ planet.edited | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-pagination></app-pagination>

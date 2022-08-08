@@ -1,0 +1,20 @@
+<div>
+    <header id="header">
+        <a mat-list-item href="https://frwk.com.br/" style="font-weight: 1000; font-size: 18px;">Framework</a>
+        <nav id="nav">
+          <button aria-label="Abrir Menu" id="btn-mobile">Menu
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a [routerLink]="['/home']" (click)="onClickFecharMenu()">Home</a></li>
+            <li><a [routerLink]="['/films']" (click)="onClickFecharMenu()">Filmes</a></li>
+            <li><a [routerLink]="['/peoples']" (click)="onClickFecharMenu()">Personagens</a></li>
+            <li><a [routerLink]="['/planets']" (click)="onClickFecharMenu()">Planetas</a></li>
+            <li><a [routerLink]="['/species']" (click)="onClickFecharMenu()">Espécies</a></li>
+            <li><a [routerLink]="['/starships']" (click)="onClickFecharMenu()">Naves</a></li>
+            <li><a [routerLink]="['/vehicles']" (click)="onClickFecharMenu()">Veículos</a></li>
+            <li><a [routerLink]="['']" (click)="onClickFecharMenu(true)" class="login">SAIR</a></li>
+          </ul>
+        </nav>
+      </header>
+</div>

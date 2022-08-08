@@ -1,0 +1,79 @@
+<div  class="title">
+  <h1>Espécies</h1>
+</div>
+
+<div  class="tbody">
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Classificação</th>
+      <th scope="col">Classe</th>
+      <th scope="col">Altura média</th>
+      <th scope="col">Cor de pele</th>
+      <th scope="col">Cor de cabelo</th>
+      <th scope="col">Cor dos olhos</th>
+      <th scope="col">Tempo médio de vida</th>
+      <th scope="col">Língua</th>
+      <th scope="col">Criado em:</th>
+      <th scope="col">Editado em:</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let specie of species">
+        <th scope="row">{{ specie.name }}</th>
+        <td>
+          <div>
+          {{ specie.classification }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.designation }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.average_height }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.skin_colors }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.hair_colors }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.eye_colors }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.average_lifespan }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.language }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.created | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ specie.edited | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-pagination></app-pagination>

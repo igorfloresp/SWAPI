@@ -1,0 +1,91 @@
+<div  class="title">
+  <h1>Veículos</h1>
+</div>
+
+<div  class="tbody">
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">Montadora</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Largura</th>
+      <th scope="col">Velocidade máxima</th>
+      <th scope="col">Tripulação</th>
+      <th scope="col">Passageiros</th>
+      <th scope="col">Capacidade de Carga</th>
+      <th scope="col">Consumíveis</th>
+      <th scope="col">Classe</th>
+      <th scope="col">Criado em:</th>
+      <th scope="col">Editado em:</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of vehicles">
+        <th scope="row">{{ vehicle.name }}</th>
+        <td>
+          <div>
+          {{ vehicle.model }}
+        </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.manufacturer }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.cost_in_credits }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.length }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.max_atmosphering_speed }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.crew }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.passengers }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.cargo_capacity }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.consumables }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.vehicle_class }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.created | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+        <td>
+          <div>
+          {{ vehicle.edited | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-pagination></app-pagination>
